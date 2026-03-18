@@ -1,202 +1,360 @@
-# 1. print 1 to 50
-for i in range(1, 51):
-    print(i)
+# Task 1 – Print Formatting
+print("Hello", "World", "Welcome", "Python", sep=" ", end="\n")
+print("Laptop", "Mouse", "Keyboard", sep=" | ")
 
-# 2. even numbers 1-100
-for i in range (2,101,2):
-    print(i)
-# 3. odd numbers 1-100
-for i in range (1,101,2):
-    print(i)
+# Task 2 – Variables
+name = "Ravi"
+age = 22
+city = "Chennai"
+print(name, age, city, sep="-")
 
-# 4. table of 7
-for i in range(1, 11):
-    print(f"7 x {i} = {7 * i}")
+# Task 3 – Multiple Assignment
+name, age, student = "Meena", 20, True
+print(name, age, student)
 
-# 5. sum 1-100
-total = 0
-for i in range(1, 101):
-    total += i  
-print("Sum;",total)
+# Task 4 – Indexing
+word = "Python"
+print("First letter:", word[0])
+print("Third letter:", word[2])
+print("Last letter:", word[-1])
+# -----------------------------
+# Bitwise Operator Tasks
+# -----------------------------
 
-#reverse 50 to 1
-for i in range(50, 0, -1):
-    print(i)
+# 1
+a = 10
+b = 6
+print("1:", a & b)
 
-# 7. count number divisible by 3 
-count = 0
-for i in range(1, 101):
-    if i % 3 == 0:
-        count += 1
-print("count:", count)
+# 2
+x = 12
+y = 5
+print("2:", x | y)
 
-#8.squares 1-10
-for i in range(1, 11):
-    print(i*i)
+# 3
+num = 8
+print("3:", ~num)
 
-#9. cubes 1-10
-for i in range(1,11):
-    print(i**3)
+# 4
+a = 15
+b = 9
+print("4:", a ^ b)
 
-# 10. input n 
-n = int(input("Enter a n: "))
-for i in range(1, n+1):
-    print(i)
+# 5
+num = 7
+print("5:", num << 2)
 
-# while loop
+# 6
+num = 20
+print("6:", num >> 1)
 
-#11. 1 to 20
-i = 1
-while i <= 20:
-    print(i)
-    i += 1
-#12. factorial
-n = int(input("Enter a number: "))
-fact = 1
-i = 1
-while i <= n:
-    fact *= i
-    i += 1          
-print("Factorial:", fact)
+# 7
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print("7 AND result:", a & b)
 
-# reverse number 
-num = int(input("Enter a number: "))
-reverse = 0 
-while num > 0:
-    digit = num % 10
-    reverse = reverse * 10 + digit
-    num //= 10
-    print("Reverse:", reverse)
-
-# 14. count digits
-num = int(input("Enter a number: "))
-count = 0       
-while num > 0:
-    num //= 10
-    count += 1
-print("Count of digits:", count)
+# 8
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+print("8 XOR result:", a ^ b)
 
 
-#15. stop input
-while True:
-    text = input("Enter something (type 'stop' to end): ")
-    if text.lower() == 'stop':
-        break
+# -----------------------------
+# String Tasks
+# -----------------------------
 
-# 18. tables 1-5
-for i in range(1,6):
-    for j in range(1,11):
-        print(i,"x",j,"=",i*j)
-        print()
+# 9
+s = "hi"
+print("9:", s * 4)
 
-#20. 1-9 grid
+# 10
+s = "python"
+print("10:", s * 3)
 
-num =1 
-for i in range(3):
-    for j in range(3):
-        print(num, end=" ")
-        num += 1
-    print()
+# 11
+a = "super"
+b = "man"
+print("11:", a + b)
 
-# 21. count characters
-s = input("Enter a string: ")
-count = 0
-for i in s:
-    count += 1
-print(count)
+# 12
+a = "hello"
+b = " "
+c = "world"
+print("12:", a + b + c)
 
+# 13
+name = input("Enter your name: ")
+print("13:", name * 5)
 
-#22. count vowels
-vowels = 'aeiouAEIOU'
-count = 0
-for ch in s:
-    if ch in vowels:
-        count += 1
-print("Vowel count:", count)
-
-# 23. count consonants
-count = 0
-for ch in s:
-    if ch.isalpha() and ch not in vowels:
-        count += 1
-        print("Consonant count:", count)
-
-#24. reverse string
-reverse = ""
-for ch in s:
-    reverse = ch  + reverse
-print("Reverse string:", reverse)
+# 14
+a = input("Enter first string: ")
+b = input("Enter second string: ")
+print("14:", a + b)
 
 
-#25. palindrome
-if s == s[::-1]:
-    print("Palindrome") 
-else:    
-    print("Not a palindrome")
+# -----------------------------
+# Input & Type Casting
+# -----------------------------
+
+# 15
+name = input("Enter name: ")
+print("15 type:", type(name))
+
+# 16
+age = int(input("Enter age: "))
+print("16 age:", age)
+
+# 17
+a = int(input("Enter number1: "))
+b = int(input("Enter number2: "))
+print("17 sum:", a + b)
+
+# 18
+m1 = int(input("Enter mark1: "))
+m2 = int(input("Enter mark2: "))
+print("18 average:", (m1 + m2) / 2)
+
+# 19
+a = int(input("Enter a: "))
+b = int(input("Enter b: "))
+print("19 result:", 3 * a * 2 + b - 2)
+
+# 20
+num = input("Enter number: ")
+print("20 before:", type(num))
+num = int(num)
+print("20 after:", type(num))
 
 
-s = input("Enter a string: ")
-print(s[:5])  
-print(s[-3:])
-print(s[::-1])
-print(s[::2])
-print(s[1::-1])
+# -----------------------------
+# Unit Digit Tasks
+# -----------------------------
 
-# 31. sum of list
-lst = [1,2,3,4,5]
+# 21
+num = input("Enter number: ")
+print("21 last digit:", num[-1])
 
-print(sum(lst))
-print(min(lst))
-print(max(lst))
+# 22
+num = int(input("Enter number: "))
+print("22 unit digit:", num % 10)
+
+# 23
+num = int(input("Enter number: "))
+print("23 remove last digit:", num // 10)
+
+# 24
+num = int(input("Enter number: "))
+print("24 second last digit:", (num // 10) % 10)
+
+# 25
+num = int(input("Enter 5 digit number: "))
+print("25 last digit:", num % 10)
 
 
-count = 0
-for i in lst:
-    count += i
-    print(count)
+# -----------------------------
+# If Statement Tasks
+# -----------------------------
 
-x = int(input("Enter a number: "))
-if x in lst:
-    print("Exists")
+# 26
+if 10 >= 5:
+    print("26: 10 is greater than or equal to 5")
+
+# 27
+num = int(input("Enter number: "))
+if num > 50:
+    print("27 greater than 50")
+
+# 28
+age = int(input("Enter age: "))
+if age >= 18:
+    print("28 eligible")
+
+# 29
+num = int(input("Enter number: "))
+if num > 100:
+    print("29 greater than 100")
+
+# 30
+num = int(input("Enter number: "))
+if num >= 0:
+    print("30 positive")
+
+
+# -----------------------------
+# If Else Tasks
+# -----------------------------
+
+# 31
+num = int(input("Enter number: "))
+if num % 2 == 0:
+    print("31 Even")
 else:
-    print("Not exists")
+    print("31 Odd")
+
+# 32
+marks = int(input("Enter marks: "))
+if marks >= 35:
+    print("32 Pass")
+else:
+    print("32 Fail")
+
+# 33
+num = int(input("Enter number: "))
+if num > 0:
+    print("33 Positive")
+else:
+    print("33 Negative")
+
+# 34
+num = int(input("Enter number: "))
+if num > 10:
+    print("34 greater than 10")
+else:
+    print("34 not greater than 10")
 
 
-# list operation
+# -----------------------------
+# Nested If Tasks
+# -----------------------------
 
-lst =[1,2,3]
+# 35 Job eligibility
+age = int(input("Enter age: "))
+height = int(input("Enter height: "))
+weight = int(input("Enter weight: "))
 
-lst.append(4)
-lst.append(5)
-lst.append(6)
-print(lst)
-
-lst.insert(1,10)
-print(lst)
-
-
-lst.remove(3)
-print(lst)
-
-
-rev = []
-for i in lst:
-    rev = [i] + rev
-print(rev)
-
-lst = [5,2,8,1]
-for i in range(len(lst)):
-    for j in range(i+1, len(lst)):
-        if lst[i] > lst[j]:
-            lst[i], lst[j] = lst[j], lst[i]
-print(lst)
+if age >= 18:
+    if height >= 160:
+        if weight >= 60:
+            print("35 Selected")
+        else:
+            print("35 Rejected")
+    else:
+        print("35 Rejected")
+else:
+    print("35 Rejected")
 
 
+# 36 College admission
+marks = int(input("Enter marks: "))
+age = int(input("Enter age: "))
+
+if marks >= 60:
+    if age >= 17:
+        print("36 Admission Granted")
+    else:
+        print("36 Age not eligible")
+else:
+    print("36 Marks not eligible")
 
 
+# 37 Sports selection
+age = int(input("Enter age: "))
+height = int(input("Enter height: "))
+weight = int(input("Enter weight: "))
+
+if age >= 16:
+    if height >= 150:
+        if weight >= 50:
+            print("37 Selected")
+        else:
+            print("37 Rejected")
+    else:
+        print("37 Rejected")
+else:
+    print("37 Rejected")
 
 
+# -----------------------------
+# Match Statement Tasks
+# -----------------------------
+
+# 38 Day name
+num = int(input("Enter number (1-7): "))
+
+match num:
+    case 1: print("Monday")
+    case 2: print("Tuesday")
+    case 3: print("Wednesday")
+    case 4: print("Thursday")
+    case 5: print("Friday")
+    case 6: print("Saturday")
+    case 7: print("Sunday")
+    case _: print("Invalid")
 
 
+# 39 Colors
+num = int(input("Enter number (1-3): "))
+
+match num:
+    case 1: print("Red")
+    case 2: print("Blue")
+    case 3: print("Green")
+    case _: print("Invalid")
 
 
+# 40 Fruits
+num = int(input("Enter number (1-4): "))
+
+match num:
+    case 1: print("Apple")
+    case 2: print("Mango")
+    case 3: print("Orange")
+    case 4: print("Banana")
+    case _: print("Invalid")
+
+# Task 5 – Arithmetic Operators
+print(25 + 10)
+print(50 - 20)
+print(8 * 5)
+print(100 / 10)
+print(10 % 3)
+print(2 ** 4)
+print(20 // 3)
+
+# Task 6 – BODMAS Expression
+print(3 + 2 * 5 ** 2)
+
+# Task 7 – Assignment Operator
+num = 50
+num += 25
+print(num)
+
+num = 100
+num /= 10
+print(num)
+
+# Task 8 – Comparison Operators
+print(10 > 5)
+print(20 < 15)
+print(5 == 5)
+print(10 != 8)
+print(7 >= 7)
+print(6 <= 2)
+
+# Task 9 – String Comparison
+a = "apple"
+b = "Apple"
+print(a == b)
+
+# Task 10 – Logical Operators
+print(10 > 5 and 5 == 5)
+print(5 > 10 or 10 == 10)
+print(not(5 > 2))
+
+# Task 11 – Membership Operator
+numbers = [10,20,30,40,50]
+print(20 in numbers)
+print(60 in numbers)
+print(30 not in numbers)
+
+# Task 12 – Swap Variables
+a = 10
+b = 20
+a, b = b, a
+print("a =", a)
+print("b =", b)
+
+# Task 13 – Bitwise XOR
+a = 6
+b = 3
+print(a ^ b)
